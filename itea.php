@@ -32,7 +32,10 @@
                         <table class="table table-hover">
                             <?php foreach($team_drinks as $person): ?>
                                 <tr>
-                                    <td class="table-styling-first"><strong><?php echo $person["name"]; ?></strong></td>
+                                    <td class="table-styling-first"><strong><?php echo $person["name"]; ?></strong> <?php if(isset($person["label"])) {
+                                        echo '<br/> <span class="label label-primary">'.$person["label"].'</span>'; } 
+                                            ?>
+                                    </td>
                                     <td><?php echo $person["work_drink"]; ?></td>
                                 </tr>
                             <?php endforeach; ?>
