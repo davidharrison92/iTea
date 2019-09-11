@@ -20,6 +20,7 @@
     <head>
         <title>iTea | IS Team</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="iteastyles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
@@ -45,7 +46,7 @@
                         <table class="table table-hover">
                         <?php foreach($team_drinks as $person): ?>
                             <tr>
-                                <td style="width:25%;"><strong><?php echo $person["name"]; ?></strong></td>
+                                <td class="table-styling-first"><strong><?php echo $person["name"]; ?></strong></td>
                                 <td><?php echo $person["work_drink"]; ?></td>
                             </tr>
                         <?php endforeach; ?>
@@ -57,7 +58,7 @@
                         <table class="table table-hover">
                         <?php foreach($team_drinks as $person): ?>
                             <tr>
-                                <td style="width:25%;"><strong><?php echo $person["name"]; ?></strong></td>
+                                <td class="table-styling-first"><strong><?php echo $person["name"]; ?></strong></td>
                                 <td><?php echo $person["pub_drink"]; ?></td>
                             </tr>
                         <?php endforeach; ?>
