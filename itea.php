@@ -44,7 +44,10 @@
                     <div role="tabpanel" class="tab-pane active" id="Tea">
                         <table class="table table-hover">
                         <?php foreach($team_drinks as $person): ?>
-                            <tr><td style="width:25%;"><strong><?php echo $person["name"]; ?></strong></td><td><?php echo $person["work_drink"]; ?></td></tr>
+                            <tr>
+                                <td style="width:25%;"><strong><?php echo $person["name"]; ?></strong></td>
+                                <td><?php echo $person["work_drink"]; ?></td>
+                            </tr>
                         <?php endforeach; ?>
                         </table>
                     </div><!-- end tea tab -->
@@ -53,7 +56,10 @@
                     <div role="tabpanel" class="tab-pane" id="beer">
                         <table class="table table-hover">
                         <?php foreach($team_drinks as $person): ?>
-                            <tr><td style="width:25%;"><strong><?php echo $person["name"]; ?></strong></td><td><?php echo $person["pub_drink"]; ?></td></tr>
+                            <tr>
+                                <td style="width:25%;"><strong><?php echo $person["name"]; ?></strong></td>
+                                <td><?php echo $person["pub_drink"]; ?></td>
+                            </tr>
                         <?php endforeach; ?>
                         </table>
                     </div> <!-- end beer tab -->
