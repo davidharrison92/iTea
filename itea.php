@@ -4,23 +4,16 @@
    
    //Build an array with the data
 
-     $team_drinks = array();
+    $team_drinks = array();
 
-
-
-     $fetchqry = "SELECT name, work_drink, pub_drink FROM team order by name ASC"; 
-     $result = mysqli_query($conn,$fetchqry);
+    $fetchqry = "SELECT name, work_drink, pub_drink FROM team order by name ASC"; 
+    $result = mysqli_query($conn,$fetchqry);
 
     $rows = array();
     while($row = $result->fetch_assoc()){
         $team_drinks[] = $row;
     }
-
-    // var_dump($team_drinks);
-
-    
-
-     ?>
+?>
 
 
 <html>
@@ -36,6 +29,7 @@
                 <h1>IS Tea Round Cheat Sheet</h1>
             </div>
             <div class="row">
+
               <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active">
@@ -52,23 +46,19 @@
                         <?php foreach($team_drinks as $person) {
                                                        ?> 
                             <tr><td style="width:25%;"><strong><?php echo $person["name"]; ?></strong></td><td><?php echo $person["work_drink"]; ?></td></tr>
-                            <?php
-                        }
-                     ?>
-
-                            
+                        <?php
+                            } ?>
                         </table>
                     </div><!-- end tea tab -->
+
+
                     <div role="tabpanel" class="tab-pane" id="beer">
                         <table class="table table-hover">
                                  <?php foreach($team_drinks as $person) {
                                                        ?> 
                             <tr><td style="width:25%;"><strong><?php echo $person["name"]; ?></strong></td><td><?php echo $person["pub_drink"]; ?></td></tr>
-                            <?php
-                        }
-                     ?>
-
-                          
+                        <?php
+                            } ?>
                         </table>
                     </div> <!-- end beer tab -->
                 </div> <!-- end tab content -->
