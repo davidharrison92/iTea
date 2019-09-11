@@ -16,7 +16,7 @@
         $team_drinks[] = $row;
     }
 
-    var_dump($team_drinks[2]);
+    // var_dump($team_drinks);
 
     
 
@@ -31,20 +31,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-            <!-- <table class="table table-hover"> -->
-                        
-
-                        <? foreach($team_drinks as $person) {
-                            echo $person["name"];
-                            echo $person["work_drink"];
-                            ?> 
-                            <!-- <tr><td><strong><? echo $person["name"]; ?></strong></td><td><? echo $person["work_drink"]; ?></td></tr> -->
-                            <?
-                        }
-                     ?>
-            <!-- </table> -->
-
-
         <div class="container">
             <div class="row">
                 <h1>IS Tea Round Cheat Sheet</h1>
@@ -63,13 +49,10 @@
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="Tea">
                         <table class="table table-hover">
-                        
-
-                        <? foreach($team_drinks as $person) {
-                            var_dump($person);
-                            ?> 
-                            <tr><td><strong><? echo $person["name"]; ?></strong></td><td><? echo $person["work_drink"]; ?></td></tr>
-                            <?
+                        <?php foreach($team_drinks as $person) {
+                                                       ?> 
+                            <tr><td style="width:25%;"><strong><?php echo $person["name"]; ?></strong></td><td><?php echo $person["work_drink"]; ?></td></tr>
+                            <?php
                         }
                      ?>
 
@@ -78,18 +61,14 @@
                     </div><!-- end tea tab -->
                     <div role="tabpanel" class="tab-pane" id="beer">
                         <table class="table table-hover">
-                            <tr><td><strong>Nigel</strong></td><td> Bitter, something like a Doom Bar.</td></tr>
-                            <tr><td><strong>Craig</strong></td><td> "I have a wife."</td></tr>
-                            <tr><td><strong>Dave</strong></td><td> HPA, else some lager like San Miguel. Estrella in the Robin Hood. </td></tr>
-                            <tr><td><strong>Luke</strong></td><td> Bitter. If there's one with an amusing name, go for that.</td></tr>
-                            <tr><td><strong>Gary</strong></td><td> Usually Guinness. After playing badders, a refreshing pint of Premium Lager.</td></tr>
-                            <tr><td><strong>Roy</strong></td><td> Rarely comes out. :( </td></tr>
-                            <tr><td><strong>Chris</strong></td><td> Usually Guinness. Also enjoys ales.</td></tr>
-                            <tr><td><strong>Dan</strong></td><td> Lager in winter, Cider in Summer</td></tr>
-                            <tr><td><strong>Alex</strong></td><td> Cider or Cider Shandy - if he's feeling like a pansy. <span class="glyphicon glyphicon-exclamation-sign"aria-hidden="true"></span> Never Beer  <span class="glyphicon glyphicon-exclamation-sign"aria-hidden="true"></span> </td></tr>
-                            <tr><td><strong>Suki</strong></td><td> Rarely comes out, beer, impossible to predict.</td></tr>
-                            <tr><td><strong>Mila</strong>  </td><td> Half a lager or a Diet Coke.</td></tr>
-                            <tr><td><strong>Jenny</strong></td><td> Alcohol-free lager, or Virgin Mary, or Lime &amp; Soda</td></tr>
+                                 <?php foreach($team_drinks as $person) {
+                                                       ?> 
+                            <tr><td style="width:25%;"><strong><?php echo $person["name"]; ?></strong></td><td><?php echo $person["pub_drink"]; ?></td></tr>
+                            <?php
+                        }
+                     ?>
+
+                          
                         </table>
                     </div> <!-- end beer tab -->
                 </div> <!-- end tab content -->
