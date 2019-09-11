@@ -1,5 +1,5 @@
 <?php
-    include("db_config.php");
+    include("db/db_config.php");
     //Build an array with the data
     $team_drinks = array();
     $fetchqry = "SELECT name, work_drink, pub_drink FROM team order by name ASC";

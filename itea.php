@@ -1,5 +1,5 @@
 <?php
-     include("db_query.php");
+     include("db/db_query.php");
 ?>
 
 <html>
