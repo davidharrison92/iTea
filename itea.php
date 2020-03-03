@@ -36,7 +36,7 @@
                                         <?php if(isset($person["label"])): ?>
                                             <span class="label label-primary">
                                                 <?php echo $person["label"] ?>
-                                            </span>
+                                            </span>&nbsp;
                                         <?php endif;?>
                                         <strong><?php echo $person["name"]; ?></strong>
                                     </td>
@@ -51,7 +51,14 @@
                         <table class="table table-hover">
                             <?php foreach($team_drinks as $person): ?>
                                 <tr>
-                                    <td class="table-styling-first"><strong><?php echo $person["name"]; ?></strong></td>
+                                    <td class="table-styling-first">
+                                        <?php if(isset($person["label"])): ?>
+                                            <span class="label label-primary">
+                                                <?php echo $person["label"] ?>
+                                            </span>&nbsp;
+                                        <?php endif;?>
+                                        <strong><?php echo $person["name"]; ?></strong>
+                                    </td>
                                     <td><?php echo $person["pub_drink"]; ?></td>
                                 </tr>
                             <?php endforeach; ?>
