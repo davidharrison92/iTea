@@ -29,6 +29,9 @@
               <!-- Tab panes -->
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="Tea">
+                    <br>
+                    <div class="alert alert-danger" role="alert"><strong>COVID-19:</strong> Remain at home. Make your own tea.</div>
+
                         <table class="table table-hover">
                             <?php foreach($team_drinks as $person): ?>
                                 <tr>
@@ -48,6 +51,8 @@
 
 
                     <div role="tabpanel" class="tab-pane" id="beer">
+                    <br>
+                     <div class="alert alert-danger" role="alert"><strong>COVID-19:</strong> Do not go to the pub. Remain at home. Drink yourself through quarantine.</div>
                         <table class="table table-hover">
                             <?php foreach($team_drinks as $person): ?>
                                 <tr>
